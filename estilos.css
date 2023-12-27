@@ -71,13 +71,13 @@ a:hover {
     text-decoration: underline;
 }
 .profile-header {
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .profile-header img {
-    width: 150px; /* ajusta el tamaño de la imagen según sea necesario */
-    height: 150px;
+    width: 80px; /* ajusta el tamaño de la imagen según sea necesario */
+    height: 80px;
     border-radius: 55%; /* crea la forma circular */
-    margin-bottom: 10px;
+    margin-right: 15px; /* espacio entre la imagen y el texto */
 }
-
