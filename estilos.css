@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -13,7 +12,6 @@ body {
     color: #333;
 }
 
-/* Encabezado */
 header {
     background-color: #3498db;
     color: #fff;
@@ -76,8 +74,8 @@ a:hover {
 }
 
 .profile-header img {
-    width: 80px; /* ajusta el tamaño de la imagen según sea necesario */
-    height: 80px;
-    border-radius: 55%; /* crea la forma circular */
-    margin-right: 15px; /* espacio entre la imagen y el texto */
+    width: 80px; 
+    height: 90px;
+    border-radius: 55%; 
+    margin-right: 15px; 
 }
