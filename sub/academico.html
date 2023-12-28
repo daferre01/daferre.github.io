@@ -36,19 +36,23 @@
             <li><a href="curriculumDavidFernándezReboredo.pdf" download="curriculumDavidFernándezReboredo.pdf">Descargar Currículum</a></li>
         </ul>
     </nav>
-    <section class="expandable-section" id="especializacion-section">
+    
+    <section class="expandable-section" id="bachillerato-section">
         <p>2017-2019: <h2>Bachillerato Científico-Técnico</h2></p>
         <p>IES Aller Ulloa (Lalín).</p>
     </section>
-    <section class="expandable-section" id="especializacion-section">
+    
+    <section class="expandable-section" id="ingenieria-section">
         <p>2019-2021: <h2>Escuela Superior de Ingeniería Informática (primer y segundo año)</h2></p>
         <p>Universidad de Vigo (Ourense).</p>
     </section>
-    <section class="expandable-section" id="especializacion-section">
+    
+    <section class="expandable-section" id="superior-section">
         <p>2021-2023: <h2>Grado Superior en Desarrollador de Aplicaciones Multiplataforma.</h2></p>
         <p>C.I.F.P A Carballeira (Ourense)</p>
     </section>
-     <section class="expandable-section" id="especializacion-section">
+    
+    <section class="expandable-section" id="especializacion-section">
         <p>2023-2024: <h2>Curso de Especialización de Big Data e Inteligencia Artificial</h2></p>
         <p>IES Fernando Wirtz</p>
         <p>Texto adicional que se mostrará cuando se expanda la sección.</p>
@@ -56,19 +60,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var section = document.getElementById('especializacion-section');
-            var button = document.createElement('div');
-            button.textContent = '▶'; // Flecha derecha
-            button.className = 'expand-button';
-            button.onclick = function () {
-                section.classList.toggle('expanded');
-                section.style.maxHeight = section.classList.contains('expanded') ? section.scrollHeight + 'px' : '50px';
-            };
-
-            // Inserta el botón antes del texto de la sección
-            section.insertBefore(button, section.firstChild);
+            var sections = document.querySelectorAll('.expandable-section');
+            
+            sections.forEach(function(section) {
+                var button = document.createElement('div');
+                button.textContent = '▶'; // Flecha derecha
+                button.className = 'expand-button';
+                button.onclick = function () {
+                    section.classList.toggle('expanded');
+                    section.style.maxHeight = section.classList.contains('expanded') ? section.scrollHeight + 'px' : '50px';
+                };
+                // Inserta el botón antes del texto de la sección
+                section.insertBefore(button, section.firstChild);
+            });
         });
     </script>
+    
     <footer>
         <p>Puedes contactarme a través de mi correo electrónico: <a href="mailto:davidfr2001@hotmail.com">davidfr2001@hotmail.com</a></p>
     </footer>
