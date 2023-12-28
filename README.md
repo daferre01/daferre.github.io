@@ -4,22 +4,6 @@
 
 Bienvenido a mi página web personal, donde comparto información sobre mi experiencia laboral, académica y habilidades como desarrollador de software. Esta página ha sido creada como parte de mi portafolio en línea.
 
-## Contenido
-
-- [Capturas de Pantalla](#capturas-de-pantalla)
-- [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Cómo Ver la Página](#cómo-ver-la-página)
-- [Cómo Contribuir](#cómo-contribuir)
-- [Contacto](#contacto)
-- [Licencia](#licencia)
-
-## Capturas de Pantalla
-
-![Captura de pantalla 1](captura1.png)
-_Descripción opcional._
-
-![Captura de pantalla 2](captura2.png)
-_Descripción opcional._
 
 ## Tecnologías Utilizadas
 
