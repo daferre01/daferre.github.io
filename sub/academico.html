@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Académico</title>
     <link rel="stylesheet" type="text/css" href="../estilos.css">
+    <style>
+    /* Estilos adicionales si los necesitas */
+    .expandable-section {
+        max-height: 50px; /* Altura máxima inicial */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; /* Animación de transición */
+    }
+
+    .expand-button {
+        cursor: pointer;
+        color: #3498db;
+    }
+
+    .expanded {
+        transform: rotate(90deg);
+    }
 </head>
 <body>
     <header>
@@ -27,14 +43,31 @@
         <p>2019-2021: <h2>Escuela Superior de Ingeniería Informática (primer y segundo año)</h2></p>
         <p>Universidad de Vigo (Ourense).</p>
     </section>
-    <section>
+    <section class="expandable-section" id="especializacion-section">
         <p>2021-2023: <h2>Grado Superior en Desarrollador de Aplicaciones Multiplataforma.</h2></p>
         <p>C.I.F.P A Carballeira (Ourense)</p>
     </section>
-    <section>
+     <section class="expandable-section" id="especializacion-section">
         <p>2023-2024: <h2>Curso de Especialización de Big Data e Inteligencia Artificial</h2></p>
         <p>IES Fernando Wirtz</p>
+        <p>Texto adicional que se mostrará cuando se expanda la sección.</p>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var section = document.getElementById('especializacion-section');
+            var button = document.createElement('div');
+            button.textContent = '▶'; // Flecha derecha
+            button.className = 'expand-button';
+            button.onclick = function () {
+                section.classList.toggle('expanded');
+                section.style.maxHeight = section.classList.contains('expanded') ? section.scrollHeight + 'px' : '50px';
+            };
+
+            // Inserta el botón antes del texto de la sección
+            section.insertBefore(button, section.firstChild);
+        });
+    </script>
     <footer>
         <p>Puedes contactarme a través de mi correo electrónico: <a href="mailto:davidfr2001@hotmail.com">davidfr2001@hotmail.com</a></p>
     </footer>
