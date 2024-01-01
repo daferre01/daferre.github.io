@@ -89,3 +89,10 @@ section p {
     line-height: 1.6;
     color: #555;
 }
+.styled-image {
+    display: block;
+    margin: 20px auto; /* Centra la imagen horizontalmente con un margen superior e inferior de 20px */
+    max-width: 100%; /* Asegura que la imagen no supere el ancho de su contenedor */
+    border-radius: 8px; /* Añade bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+}
