@@ -88,7 +88,7 @@
         <div class="col-sm-12">
           <p class="text-center mb-4">Selecciona un proyecto para ver más detalles:</p>
           <button class="btn btn-primary mx-auto d-block mb-4" id="proyecto1-btn">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</button>
-          <div id="proyecto1" class="collapse">
+          <div id="proyecto1" hidden>
             <iframe title="trabajofinal" width="100%" height="400" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowFullScreen="true"></iframe>
           </div>
         </div>
@@ -179,10 +179,10 @@
       var proyecto1 = document.getElementById("proyecto1");
 
       proyecto1Btn.addEventListener("click", function () {
-        if (proyecto1.style.display === "block") {
-          proyecto1.style.display = "none";
+        if (proyecto1.hasAttribute("hidden")) {
+          proyecto1.removeAttribute("hidden");
         } else {
-          proyecto1.style.display = "block";
+          proyecto1.setAttribute("hidden", "true");
         }
       });
     });
