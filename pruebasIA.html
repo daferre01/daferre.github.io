@@ -77,29 +77,37 @@
   </div>
 
   <!-- proyectos section -->
-  <section class="proyectos_section layout_padding">
-    <div class="custom_heading-container">
-      <h3 class=" ">
-        Proyectos
-      </h3>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <p class="text-center mb-4">Selecciona un proyecto para ver más detalles:</p>
-          <button class="btn btn-primary mx-auto d-block mb-4" id="proyecto1-btn">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</button>
-          <div id="proyecto1" hidden>
-            <iframe title="trabajofinal" width="100%" height="400" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowFullScreen="true"></iframe>
-          </div>
-          <button class="btn btn-primary mx-auto d-block mb-4" id="proyecto2-btn">Proyecto de red Neuronal de Predicción de Ataque al Corazón</button>
-          <div id="proyecto2" hidden>
-            <iframe title="trabajofinal" width="100%" height="400" src="ia/heart_redneuronal.html" frameborder="0" allowFullScreen="true"></iframe>
-          </div>
+<section class="proyectos_section layout_padding">
+  <div class="custom_heading-container">
+    <h3 class="">Proyectos</h3>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="text-center mb-4">Selecciona un proyecto para ver más detalles:</p>
+        <table class="table">
+          <tr>
+            <td colspan="3">
+              <button class="btn btn-primary btn-block" id="proyecto1-btn">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <button class="btn btn-primary btn-block" id="proyecto2-btn">Proyecto de red Neuronal de Predicción de Ataque al Corazón</button>
+            </td>
+          </tr>
+        </table>
+        <div id="proyecto1" hidden>
+          <iframe title="trabajofinal" width="100%" height="400" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowFullScreen="true"></iframe>
         </div>
-      
+        <div id="proyecto2" hidden>
+          <iframe title="trabajofinal" width="100%" height="400" src="ia/heart_redneuronal.html" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- info section -->
   <section class="info_section layout_padding">
