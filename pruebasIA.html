@@ -85,28 +85,25 @@
     <div class="row">
       <div class="col-sm-12">
         <p class="text-center mb-4">Selecciona un proyecto para ver más detalles:</p>
-        <table class="table">
-          <tr>
-            <td colspan="3">
-              <button class="btn btn-primary btn-block" id="proyecto1-btn">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</button>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="3">
-              <button class="btn btn-primary btn-block" id="proyecto2-btn">Proyecto de red Neuronal de Predicción de Ataque al Corazón</button>
-            </td>
-          </tr>
-        </table>
-        <div id="proyecto1" hidden>
-          <iframe title="trabajofinal" width="100%" height="400" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowFullScreen="true"></iframe>
-        </div>
-        <div id="proyecto2" hidden>
-          <iframe title="trabajofinal" width="100%" height="400" src="ia/heart_redneuronal.html" frameborder="0" allowFullScreen="true"></iframe>
+        <div class="d-flex flex-wrap justify-content-between">
+          <div class="card mb-3" style="width: calc(50% - 10px);">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</h5>
+              <iframe title="trabajofinal" width="100%" height="200" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+          </div>
+          <div class="card mb-3" style="width: calc(50% - 10px);">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto de red Neuronal de Predicción de Ataque al Corazón</h5>
+              <iframe title="trabajofinal" width="100%" height="200" src="ia/heart_redneuronal.html" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
   <!-- info section -->
