@@ -69,30 +69,110 @@
   </div>
 
   <!-- service section -->
-
+  <style>
+    .service_section {
+      padding: 60px 0;
+    }
+  
+    .custom_heading-container h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  
+    .card {
+      background: linear-gradient(135deg, #ffffff 0%, #e2e2e2 100%);
+      border-radius: 15px;
+      padding: 30px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 100%; /* Altura del 100% para ocupar todo el espacio vertical disponible */
+    }
+  
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  
+    .card img {
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto; /* Centrar la imagen horizontalmente */
+    }
+  
+    .card h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #333;
+      margin-top: 15px;
+      font-size: 24px;
+      text-align: center;
+    }
+  
+    .card p {
+      font-family: 'Roboto', sans-serif;
+      color: #555;
+      text-align: center;
+      font-size: 12px; /* Reducir el tamaño de la fuente */
+      line-height: 1.6; /* Espaciado entre líneas adecuado */
+      word-wrap: break-word; /* Propiedad para que el texto se ajuste y no salga fuera de la tarjeta */
+      max-width: 100%; /* Asegura que el texto no exceda el ancho de la tarjeta */
+    }
+  
+    @media (min-width: 768px) {
+      .card {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+  
+      .img-box {
+        flex: 1;
+        margin-right: 20px;
+      }
+  
+      .detail-box {
+        flex: 2;
+        padding-left: 20px;
+      }
+    }
+  
+  </style>
+  
+  <!-- service section -->
   <section class="service_section layout_padding">
     <div class="container">
       <div class="custom_heading-container">
-        <h3 class=" ">
+        <h3 class="">
           Ámbito profesional
         </h3>
       </div>
       <p class="">
-        Realice prácticas en :
+        Realicé prácticas en :
       </p>
-      <div>
-        <div>
-          <div>
-            <div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-3">
+            <div class="card-body">
               <div class="img-box">
-                <img src="images/edisa.jpg" alt="">
+                <img src="images/edisa.jpg" class="img-fluid" alt="Edisa Sistemas de Información ERP">
               </div>
-              <div class="detail-box">
-                <h6>
-                  Edisa Sistemas de Información ERP
-                </h6>
+              <div class="detail-box mt-3">
+                <h6>Edisa Sistemas de Información ERP</h6>
                 <p>
-                  Durante el período comprendido entre el 23 de enero de 2023 y el 22 de junio de 2023, desempeñé el rol de analista de datos en una posición de prácticas. Mi principal área de responsabilidad se centró en el análisis de datos utilizando PLSQL, abarcando diversos aspectos de los ecosistemas de Oracle, como Forms y BiPublisher.                </p>
+                  Rol: Analista de datos en posición de prácticas Duales.<br>
+                  Período: 23 de enero de 2023 - 22 de junio de 2023.<br>
+                  Análisis de datos.<br>
+                  Áreas abarcadas: Oracle Forms, BiPublisher, BiReports, Java, Python, React, PL/SQL (nivel alto), Postman.
+                </p>
               </div>
             </div>
           </div>
@@ -100,6 +180,9 @@
       </div>
     </div>
   </section>
+  
+
+  
 
   <!-- end service section -->
 
