@@ -4,7 +4,6 @@
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
@@ -12,15 +11,15 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Académico</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <title>David Fernandez Reboredo</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -31,44 +30,37 @@
 
 <body>
   <div class="hero_area">
-    <!-- header section strats -->
+    <!-- header section starts -->
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <span>
-              David Fernandez Reboredo
-            </span>
+            <span>David Fernandez Reboredo</span>
           </a>
-          <!-- <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button> -->
-
-          <div >
-            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="academico.html"> Académico </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="laboral.html"> Laboral </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://github.com/daferre01" target="_blank">GitHub</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://www.linkedin.com/in/daferre01/" target="_blank">LinkedIn</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="curriculumDavidFernándezReboredo (2).pdf" target="_blank">Descargar Curriculum</a>
-                </li>
-              </ul>
-            </div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="academico.html">Académico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="laboral.html">Laboral</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/daferre01" target="_blank">GitHub</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/daferre01/" target="_blank">LinkedIn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="curriculumDavidFernándezReboredo (2).pdf" target="_blank">Descargar Curriculum</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
@@ -76,42 +68,82 @@
     <!-- end header section -->
   </div>
 
+
+  <style>
+    .card {
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-bottom: 20px;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card-body {
+      background: linear-gradient(135deg, #f9f9f9 0%, #e2e2e2 100%);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #333;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
 <section class="proyectos_section layout_padding">
-  <div class="custom_heading-container">
-    <h3 class="">Proyectos</h3>
+  <div class="custom_heading-container text-center">
+    <h3>Proyectos</h3>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <p class="text-center mb-4">Selecciona un proyecto para ver más detalles:</p>
-        <div class="d-flex flex-wrap justify-content-between">
-          <div class="card mb-3" style="width: 50%;">
-            <div class="card-body">
-              <a href="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-              <h5 class="card-title">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</h5>
-              <iframe title="trabajofinal" width="100%" height="200" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowfullscreen="true"></iframe>
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <a href="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
+                <h5 class="card-title">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</h5>
+                <iframe title="trabajofinal" width="100%" height="200" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowfullscreen="true"></iframe>
+              </div>
             </div>
           </div>
-          <div class="card mb-3" style="width: 50%;">
-            <div class="card-body">
-              <a href="ia/heart_redneuronal.html" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-              <h5 class="card-title">Proyecto de red Neuronal de Predicción de Ataque al Corazón</h5>
-              <iframe title="trabajofinal" width="100%" height="200" src="ia/heart_redneuronal.html" frameborder="0" allowfullscreen="true"></iframe>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <a href="ia/heart_redneuronal.html" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
+                <h5 class="card-title">Proyecto de red Neuronal de Predicción de Ataque al Corazón</h5>
+                <iframe title="trabajofinal" width="100%" height="200" src="ia/heart_redneuronal.html" frameborder="0" allowfullscreen="true"></iframe>
+              </div>
             </div>
           </div>
-          <div class="card mb-3" style="width: 50%;">
-            <div class="card-body">
-              <a href="ia/melbourne.pdf" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-              <h5 class="card-title">Proyecto de Análisis de Datos de Melbourne</h5>
-              <iframe title="proyecto_melbourne" width="100%" height="200" src="ia/melbourne.pdf" frameborder="0" allowfullscreen="true"></iframe>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <a href="ia/melbourne.pdf" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
+                <h5 class="card-title">Proyecto de Análisis de Datos de Melbourne</h5>
+                <iframe title="proyecto_melbourne" width="100%" height="200" src="ia/melbourne.pdf" frameborder="0" allowfullscreen="true"></iframe>
+              </div>
             </div>
           </div>
-          <div class="card mb-3" style="width: 50%;">
-            <div class="card-body">
-              <a href="ia/2653150e9b964148a0a02e9e2f1e792a.html" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-              <h5 class="card-title">Relación de expresiones faciales con el autismo en niños</h5>
-              <iframe title="nuevo_proyecto" width="100%" height="200" src="ia/2653150e9b964148a0a02e9e2f1e792a.html" frameborder="0" allowfullscreen="true"></iframe>
-              <a href="https://www.kaggle.com/code/daferre01/binary-crossentropy-autism-0-8acc/notebook?scriptVersionId=177280435" target="_blank" class="btn btn-primary btn-lg float-right mt-2">Ir al proyecto en Kaggle</a>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+                <a href="ia/2653150e9b964148a0a02e9e2f1e792a.html" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
+                <h5 class="card-title">Relación de expresiones faciales con el autismo en niños</h5>
+                <iframe title="nuevo_proyecto" width="100%" height="200" src="ia/2653150e9b964148a0a02e9e2f1e792a.html" frameborder="0" allowfullscreen="true"></iframe>
+                <a href="https://www.kaggle.com/code/daferre01/binary-crossentropy-autism-0-8acc/notebook?scriptVersionId=177280435" target="_blank" class="btn btn-primary btn-lg float-right mt-2">Ir al proyecto en Kaggle</a>
+              </div>
             </div>
           </div>
         </div>
@@ -119,6 +151,13 @@
     </div>
   </div>
 </section>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
 
