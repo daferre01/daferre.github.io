@@ -1,179 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>David Fernandez Reboredo</title>
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Popper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-</head>
-
-<body>
-  <div class="hero_area">
-    <!-- header section starts -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <span>David Fernandez Reboredo</span>
-          </a>
-          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="academico.html">Académico</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="laboral.html">Laboral</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://github.com/daferre01" target="_blank">GitHub</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/daferre01/" target="_blank">LinkedIn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="curriculumDavidFernándezReboredo (2).pdf" target="_blank">Descargar Curriculum</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-  </div>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos de David Fernández Reboredo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f5f6;
+      color: #1e293b;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 15px;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #4b5563;
+      margin-bottom: 30px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 60px;
+    }
+
+    @media (min-width: 768px) {
+      .proyectos_section .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .proyectos_section .row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     .card {
-      transition: transform 0.2s, box-shadow 0.2s;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin-bottom: 20px;
+      border: 1px solid #e0e0e0;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 15px;
+      letter-spacing: -0.02em;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+      color: #4b5563;
+      line-height: 1.7;
       margin-bottom: 20px;
     }
-    .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    .card-body {
-      background: linear-gradient(135deg, #f9f9f9 0%, #e2e2e2 100%);
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .card-title {
-      font-family: 'Poppins', sans-serif;
-      font-weight: bold;
-      color: #333;
-    }
+
     .btn-primary {
-      background-color: #007bff;
-      border: none;
+      background-color: #3b82f6;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
     }
+
     .btn-primary:hover {
-      background-color: #0056b3;
+      background-color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-primary {
+      border: 2px solid #3b82f6;
+      background-color: transparent;
+      color: #3b82f6;
+      padding: 10px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #eff6ff;
+      color: #3b82f6;
+      transform: translateY(-2px);
+    }
+
+    .proyecto_section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .custom_heading-container {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .custom_heading-container h3 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 15px;
+      letter-spacing: -0.02em;
+    }
+
+    .custom_heading-container p {
+      font-size: 1.2rem;
+      color: #4b5563;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      aspect-ratio: 16/9;
+    }
+
+    iframe {
+      border-radius: 8px;
+      margin-bottom: 20px;
+      aspect-ratio: 16/9;
+      width: 100%;
     }
   </style>
 </head>
-<body>
 
-<section class="proyectos_section layout_padding">
-  <div class="custom_heading-container text-center">
-    <h3>Proyectos</h3>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <p class="text-center mb-4">Selecciona un proyecto para ver más detalles:</p>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <a href="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-                <h5 class="card-title">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</h5>
-                <iframe title="trabajofinal" width="100%" height="200" src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42" frameborder="0" allowfullscreen="true"></iframe>
-              </div>
+<body class="bg-gray-100">
+  <header>
+    <div class="container">
+      <h1>Proyectos</h1>
+      <p>Estos son algunos de mis proyectos destacados. Haz clic para ver más detalles.</p>
+    </div>
+  </header>
+  <main class="container">
+    <section class="proyectos_section">
+      <div class="custom_heading-container">
+        <h3>Destacados</h3>
+        <p>Selecciona un proyecto para ver más detalles:</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto en PowerBi de Estudiantes y Pisos Alquilados</h5>
+              <iframe
+                src="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42"
+                frameborder="0" allowfullscreen="true"></iframe>
+              <a href="https://app.powerbi.com/reportEmbed?reportId=f0a73577-f83b-4143-b056-b27393dfe3e1&autoAuth=true&ctid=531a8198-7b9d-4bfa-a650-4dde98b8bf42"
+                class="btn btn-primary" download>Descargar</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <a href="ia/heart_redneuronal.html" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-                <h5 class="card-title">Proyecto de red Neuronal de Predicción de Ataque al Corazón</h5>
-                <iframe title="trabajofinal" width="100%" height="200" src="ia/heart_redneuronal.html" frameborder="0" allowfullscreen="true"></iframe>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto de red Neuronal de Predicción de Ataque al Corazón</h5>
+              <iframe src="ia/heart_redneuronal.pdf" frameborder="0" allowfullscreen="true"></iframe>
+              <a href="ia/heart_redneuronal.pdf" class="btn btn-primary" download>Descargar</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <a href="ia/melbourne.pdf" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-                <h5 class="card-title">Proyecto de Análisis de Datos de Melbourne</h5>
-                <iframe title="proyecto_melbourne" width="100%" height="200" src="ia/melbourne.pdf" frameborder="0" allowfullscreen="true"></iframe>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Proyecto de Análisis de Datos de Melbourne</h5>
+              <iframe src="ia/melbourne.pdf" frameborder="0" allowfullscreen="true"></iframe>
+              <a href="ia/melbourne.pdf" class="btn btn-primary" download>Descargar</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <a href="ia/2653150e9b964148a0a02e9e2f1e792a.html" class="btn btn-primary btn-lg float-right mb-2" download>Descargar</a>
-                <h5 class="card-title">Relación de expresiones faciales con el autismo en niños</h5>
-                <iframe title="nuevo_proyecto" width="100%" height="200" src="ia/2653150e9b964148a0a02e9e2f1e792a.html" frameborder="0" allowfullscreen="true"></iframe>
-                <a href="https://www.kaggle.com/code/daferre01/binary-crossentropy-autism-0-8acc/notebook?scriptVersionId=177280435" target="_blank" class="btn btn-primary btn-lg float-right mt-2">Ir al proyecto en Kaggle</a>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Relación de expresiones faciales con el autismo en niños</h5>
+              <iframe src="ia/d4d8bb4c6ae6419a97ff5973297b3bc8.pdf" frameborder="0" allowfullscreen="true"></iframe>
+              <a href="ia/d4d8bb4c6ae6419a97ff5973297b3bc8.pdf" class="btn btn-primary" download>Descargar</a>
+              <a href="https://www.kaggle.com/code/daferre01/binary-crossentropy-autism-0-8acc/notebook?scriptVersionId=177280435"
+                target="_blank" class="btn btn-outline-primary">Ir al proyecto en Kaggle</a>
             </div>
           </div>
-          <!-- Nueva tarjeta de Solitario de Baraja Española en Java -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Solitario de Baraja Española en Java</h5>
-                <img src="https://cdn.pixabay.com/photo/2015/02/07/13/07/cards-627167_1280.jpg" alt="Baraja Española" width="100%" height="200">
-                <a href="https://github.com/daferre01/Solitario" target="_blank" class="btn btn-primary btn-lg float-right mt-2">Ver en GitHub</a>
-              </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Solitario de Baraja Española en Java</h5>
+              <img src="https://cdn.pixabay.com/photo/2015/02/07/13/07/cards-627167_1280.jpg" alt="Baraja Española"
+                class="img-fluid">
+              <a href="https://github.com/daferre01/Solitario" target="_blank" class="btn btn-primary">Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ColdCare - Proyecto microcontrolador y web de conservas</h5>
+              <img src="ia/coldcare.png" alt="Proyecto ColdCare" class="img-fluid">
+              <p class="card-text">Sistema de monitorización de temperatura para la conservación de alimentos..</p>
+              <a href="https://cd2024bfi1g1.dev.campusdual.com/" class="btn btn-primary" target="_blank">Más
+                detalles</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-  <!-- Nueva sección de Proyectos Cortos -->
-  <section class="proyectos_cortos_section layout_padding">
-    <div class="custom_heading-container text-center">
-      <h3>Más información relevante</h3>
-    </div>
-    <div class="container">
+    </section>
+    <section class="proyectos_cortos_section">
+      <div class="custom_heading-container">
+        <h3>Más información relevante</h3>
+      </div>
       <div class="row">
         <div class="col-md-6 col-lg-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Web Scrapping con Python</h5>
-              <p class="card-text">Un proyecto de scraping de datos web utilizando Python para extraer información valiosa de sitios web.</p>
-              <a href="https://github.com/daferre01/BigDataEjs/tree/main/Web_scrapping" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Un proyecto de scraping de datos web utilizando Python para extraer
+                información
+                valiosa de sitios web.</p>
+              <a href="https://github.com/daferre01/BigDataEjs/tree/main/Web_scrapping" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
@@ -181,8 +284,9 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Spark</h5>
-              <p class="card-text">Una introduccion al uso de spark</p>
-              <a href="https://github.com/daferre01/BigDataEjs/tree/main/Spark" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Una introduccion al uso de Spark</p>
+              <a href="https://github.com/daferre01/BigDataEjs/tree/main/Spark" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
@@ -190,17 +294,25 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Visualización de Datos con Nube de palabras</h5>
-              <p class="card-text">Un proyecto que muestra cómo crear visualizaciones de datos eficaces utilizando una nube de palabras.</p>
-              <a href="https://github.com/daferre01/BigDataEjs/tree/main/Nube_De_Palabras" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Un proyecto que muestra cómo crear visualizaciones de datos eficaces
+                utilizando una
+                nube de palabras.</p>
+              <a href="https://github.com/daferre01/BigDataEjs/tree/main/Nube_De_Palabras" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row mt-4">
         <div class="col-md-6 col-lg-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Árbol de clasificación diatómica</h5>
-              <p class="card-text">Contenido relacionado con la clasificación de árboles y su aplicación en el reconocimiento de diatomeas.</p>
-              <a href="https://github.com/daferre01/IAEjs/tree/main/Arbol_clasificacion_Diatomica" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Contenido relacionado con la clasificación de árboles y su aplicación
+                en el
+                reconocimiento de diatomeas.</p>
+              <a href="https://github.com/daferre01/IAEjs/tree/main/Arbol_clasificacion_Diatomica" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
@@ -208,8 +320,11 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Grafos</h5>
-              <p class="card-text">Ejercicios y recursos relacionados con la teoría de grafos y su aplicación en problemas de IA.</p>
-              <a href="https://github.com/daferre01/IAEjs/tree/main/Grafos" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Ejercicios y recursos relacionados con la teoría de grafos y su
+                aplicación en
+                problemas de IA.</p>
+              <a href="https://github.com/daferre01/IAEjs/tree/main/Grafos" target="_blank" class="btn btn-primary">Ver
+                en GitHub</a>
             </div>
           </div>
         </div>
@@ -217,17 +332,24 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Procesamiento de Imagenes</h5>
-              <p class="card-text">Contenido sobre técnicas y algoritmos para el procesamiento de imágenes en el contexto de IA.</p>
-              <a href="https://github.com/daferre01/IAEjs/tree/main/Procesamiento_Imagenes" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Contenido sobre técnicas y algoritmos para el procesamiento de
+                imágenes en el
+                contexto de IA.</p>
+              <a href="https://github.com/daferre01/IAEjs/tree/main/Procesamiento_Imagenes" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
+      </div>
+      <div class="row mt-4">
         <div class="col-md-6 col-lg-4">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Redes Neuronales</h5>
-              <p class="card-text">Este proyecto contiene distintos trabajos realizados con regresión,clasificación o redes GAN.</p>
-              <a href="https://github.com/daferre01/IAEjs/tree/main/RedesNeuronales" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
+              <p class="card-text">Este proyecto contiene distintos trabajos realizados con regresión, clasificación o
+                redes GAN.</p>
+              <a href="https://github.com/daferre01/IAEjs/tree/main/RedesNeuronales" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
@@ -236,127 +358,17 @@
             <div class="card-body">
               <h5 class="card-title">Tokenizacion</h5>
               <p class="card-text">Introduccion a tareas de tokenizacion en distintas áreas</p>
-              <a href="https://github.com/daferre01/IAEjs/tree/main/RedesNeuronales" target="_blank" class="btn btn-primary btn-lg float-right">Ver en GitHub</a>
-            </div>
-          </div>
-        </div>
-        <!-- Añade más tarjetas según sea necesario -->
-      </div>
-    </div>
-  </section>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-  <!-- info section -->
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info-logo">
-            <h2>
-              David Fernández Reboredo
-            </h2>
-            <p>
-              Aquí puedes obtener alguna información que podría serte de ayuda!
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info-nav">
-            <h4>
-              Páginas
-            </h4>
-            <ul>
-              <li>
-                <a href="index.html">
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a href="academico.html">
-                  Académico
-                </a>
-              </li>
-              <li>
-                <a href="laboral.html">
-                  Laboral
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/daferre01">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/daferre01/">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  Inicio
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info-contact">
-            <h4>
-              Información de contacto
-            </h4>
-            <div class="call">
-              <h6>
-                Contáctame
-              </h6>
-              <a href="mailto:davidfr2001@hotmail.com">
-                <img src="images/telephone.png" alt="">
-                <span>
-                  davidfr2001@hotmail.com
-                </span>
-              </a>
+              <a href="https://github.com/daferre01/IAEjs/tree/main/RedesNeuronales" target="_blank"
+                class="btn btn-primary">Ver en GitHub</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- JavaScript para la funcionalidad de expansión de los botones -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var proyecto1Btn = document.getElementById("proyecto1-btn");
-      var proyecto1 = document.getElementById("proyecto1");
-
-      proyecto1Btn.addEventListener("click", function () {
-        if (proyecto1.hasAttribute("hidden")) {
-          proyecto1.removeAttribute("hidden");
-        } else {
-          proyecto1.setAttribute("hidden", "true");
-        }
-      });
-    });
-  </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var proyecto1Btn = document.getElementById("proyecto2-btn");
-      var proyecto1 = document.getElementById("proyecto2");
-
-      proyecto1Btn.addEventListener("click", function () {
-        if (proyecto1.hasAttribute("hidden")) {
-          proyecto1.removeAttribute("hidden");
-        } else {
-          proyecto1.setAttribute("hidden", "true");
-        }
-      });
-    });
-  </script>
+    </section>
+  </main>
+  <footer class="bg-gray-100 py-4 text-center text-gray-500 text-sm mt-8">
+    <p>© 2025 David Fernández Reboredo. Todos los derechos reservados.</p>
+  </footer>
 </body>
 
 </html>
