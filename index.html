@@ -37,9 +37,7 @@
       height: 150px;
       object-fit: cover;
       margin-left: auto;
-      /* Añadido para centrar horizontalmente */
       margin-right: auto;
-      /* Añadido para centrar horizontalmente */
     }
 
     header h1 {
@@ -87,6 +85,30 @@
       color: #3b82f6;
       transform: translateY(-2px);
     }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8rem;
+      color: #718096;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .footer div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .footer img {
+      width: 50px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 
@@ -113,6 +135,21 @@
         </button>
       </div>
     </header>
+
+    <div class="footer">
+      <div>
+        Formación:
+        DAM -<img src="images/a carballeira.jpg" alt="La Carballeira Logo">
+
+        BigData e IA -<img src="images/wirtz.jpg" alt="Wirtz Logo">
+      </div>
+      <div>
+        Experiencia:
+        Ene.2023-Jun.2023 -<img src="images/edisa.jpg" alt="Edisa Logo">
+        Ene.2025-Actualidad -
+        <img src="images/crtvg.webp" alt="CRTVG Logo">
+      </div>
+    </div>
   </div>
 </body>
 
